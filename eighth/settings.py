@@ -40,6 +40,12 @@ INSTALLED_APPS = [
     'imagekit',
 ]
 
+#소셜로그인 ConnectionRefusedError 문제 해결#
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_REQUIRED = False
+##
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
